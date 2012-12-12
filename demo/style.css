@@ -1,0 +1,107 @@
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  background: #E2E2E2;
+  color: #555;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+  line-height: 140%;
+}
+
+h1 {
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+  padding: 15px 0 0 10px;
+}
+
+h2 {
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+  padding: 10px 0 5px 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+#container {
+  position: relative;
+}
+
+#left {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  width: 370px;
+  font-size: 13px;
+  line-height: 125%;
+}
+
+#right {
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  width: 80px;
+}
+
+#left a, #right a {
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  display: block;
+  background: #333;
+  text-indent: -30000px;
+}
+
+#left a:after,
+#right a:after {
+  content:'←';
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  line-height: 70px;
+  color: #FFF;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  font-size: 45px;
+}
+
+#right a:after {
+  content:'→';
+}
+
+#mid {
+  margin: 0 0 0 400px;
+}
+
+.resource {
+  background: #FFF;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+#image-holder {
+  min-height: 415px;
+  margin-bottom: 30px;
+}
+
+#warnings {
+  width: 360px;
+  height: 170px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+textarea {
+  width: 90%;
+  height: 120px;
+  background: rgba(255,255,255,0.5);
+  color: #333;
+  border: 1px solid gray;
+}
+
+#clear {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,15 @@
+{
+	"images": [{
+		"src": "images/sample-1.png",
+		"priority": 1
+	},{
+		"src": "images/sample-2.png",
+		"priority": 2,
+		"placeholder": "placeholder.png",
+		"width": 376,
+		"height": 201
+	},{
+		"src": "images/sample-3.png",
+		"placeholder": "placeholder.png"
+	}]
+}

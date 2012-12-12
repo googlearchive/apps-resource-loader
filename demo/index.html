@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Image Loader</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Image caching</h1>
+    <div id="left">
+      <p>
+        <strong>TL;DR The interesting code is in scripts/bootstrap.js</strong>
+      </p>
+
+      <p>
+        This page loads 5 images. Three are specified in a remote manifest.json file,
+        one is added from the img tag in the page and the final one comes from
+        an object created in JavaScript. These are the three ways to get images.
+      </p>
+
+      <p>
+        Image 1 should never cache. That is, the headers that come back from the
+        server should set no-cache for it. This triggers a warning, because we can't
+        save the image for offline.
+      </p>
+
+      <p>
+        All other images are given somewhere between 60 and 180 seconds as their
+        max-age. You can see the images saved in the filesystem along with an additional file
+        stored in the root which contains the details on all files we've saved.
+      </p>
+
+      <p>
+        If the manifest or a file is removed, or a file has expired, the browser will request it
+        again from the server. If it is not possible to retrieve a new copy of the
+        file then the old one is served.
+      </p>
+    </div>
+
+    <div id="mid">
+      <div>
+        <button id="clear">Clear storage</button>
+      </div>
+
+      <div id="warnings">
+        <h2>Warnings</h2>
+        <textarea id="log"></textarea>
+      </div>
+
+      <!-- One image to load in from the page itself, sample-4 -->
+      <img data-src="images/sample-4.png" data-placeholder="placeholder.png" />
+    </div>
+
+    <!-- Storage Lib: unminified -->
+
+    <!--
+    <script src="../lib/RAL/Namespace.js"></script>
+    <script src="../lib/RAL/Heap.js"></script>
+    <script src="../lib/RAL/Sanitiser.js"></script>
+    <script src="../lib/RAL/CacheParser.js"></script>
+    <script src="../lib/RAL/FileSystem.js"></script>
+    <script src="../lib/RAL/FileManifest.js"></script>
+    <script src="../lib/RAL/RemoteFile.js"></script>
+    <script src="../lib/RAL/Image.js"></script>
+    <script src="../lib/RAL/Loader.js"></script>
+    <script src="../lib/RAL/NetworkMonitor.js"></script>
+    <script src="../lib/RAL/Queue.js"></script>
+    -->
+
+    <script src="../lib/ral.min.js"></script>
+
+    <!-- A few helper functions -->
+    <script src="scripts/app.js"></script>
+
+    <!-- Now launch the demo -->
+    <script src="scripts/bootstrap.js"></script>
+</body>
+</html>
