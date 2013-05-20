@@ -16,7 +16,8 @@ var result = UglifyJS.minify (
     "Image.js",
     "Loader.js",
     "NetworkMonitor.js",
-    "Queue.js"
+    "Queue.js",
+    "Video.js"
   ],
 
   // options
