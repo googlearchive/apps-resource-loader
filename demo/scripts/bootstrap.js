@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
     parseLocalImages();
 
     // start by loading the remote asset list
-    RAL.Loader.load("manifest.json",
+    RAL.Loader.load("remote_images.json",
       'text', // xhr response type
       onSuccessfulRMGet,
       onFailedRMGet);
