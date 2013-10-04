@@ -26,7 +26,7 @@ var result = UglifyJS.minify (
   }
 );
 
-result.code += "//@ sourceMappingURL=ral.map";
+result.code += "//# sourceMappingURL=ral.map";
 
 FS.writeFileSync('../ral.min.js', result.code);
 FS.writeFileSync('../ral.map', result.map);
