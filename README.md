@@ -7,8 +7,9 @@ Since this is a very common use case, we created this library to simplify it. Ju
     var remoteImage, 
         container = document.querySelector('.imageContainer'),
         toLoad = { 'images': [ 
-           'http://myserver.com/image1.png', 
-           'http://myserver.com/image2.png' ] }; // list of image URLs
+            {src: 'http://myserver.com/image1.png'}, 
+            {src: 'http://myserver.com/image2.png'}
+            ]}; // list of image URLs
 
     toLoad.images.forEach(function(imageToLoad) {
           remoteImage = new RAL.RemoteImage(imageToLoad);
